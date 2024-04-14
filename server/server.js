@@ -5,7 +5,7 @@ const chart = require('./chart.js')
 const sendEmail = require('./email.js')
 const currency = require('./currency.js')
 
-const PORT = process.env.PORT ? Number(process.env.PORT) : 3333
+const PORT = process.env.PORT || 3333
 
 const app = express()
 
