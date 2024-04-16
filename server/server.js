@@ -1,5 +1,5 @@
-const express = require('express')
 require('dotenv').config()
+const express = require('express')
 const schedule = require('node-schedule')
 const chart = require('./chart.js')
 const sendEmail = require('./email.js')
@@ -9,7 +9,18 @@ const PORT = process.env.PORT || 3333
 
 const app = express()
 
-const job = schedule.scheduleJob('0 17 * * *', async () => {
+//Define new rule instance
+let rule = new schedule.RecurrenceRule()
+
+//Define timezone
+rule.tz = 'Europe/Dublin'
+
+//Define time to 17:00:00
+rule.second = 0
+rule.minute = 0
+rule.hour = 17
+
+const job = schedule.scheduleJob(rule, async () => {
 
     //Save the json object returned from API
     let currencyData = await currency()
