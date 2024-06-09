@@ -1,6 +1,6 @@
 # Euro Today
 
-An application designed to fetch daily currency rate information from Euro (EUR) to Brazilian Real (BRL), create a chart for the last month from the current date, and send it via email, built using Node.js + Express.
+A back-end application designed to fetch daily currency rate information from Euro (EUR) to Brazilian Real (BRL), create a chart for the last month from the current date, and send it via email, built using Node.js + Express.
 
 ## Project Status
 
